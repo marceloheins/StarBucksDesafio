@@ -8,7 +8,8 @@ export const HeaderStyle = styled.header`
     heinght: 15vh;
     margin: 0 4vw;
     width: 100%;
-    
+
+
     
     `;
 
@@ -20,8 +21,9 @@ export const StyleLink = styled(Link)`
     text-decoration: none;
     color: #1e3932;
     font-size: 24px;
-    font-family: Poppins;
+    font-family: "Poppins", serif;
     font-weight: 400;
+    line-height: 36px;
 
     &hover{
         color: #037143;
@@ -35,6 +37,8 @@ export const Ul = styled.ul`
   width: 40vw;
   justify-content: space-around;
   list-style:none;
+      
+
 `
 
 export const Li = styled.li`

@@ -1,25 +1,84 @@
-import { HeaderStyle, Button} from "./style";
+import React, { useState } from "react";
+import { MainStyle, Section, Button, ContainerCopos, ContainerCopo,} from "./style";
+
+import copo1 from "../../assets/laranja2x.png";
+import copo2 from "../../assets/vermelho2x.png";
+import copo3 from "../../assets/amarelo2x.png";
+import copoPequeno1 from "../../assets/laranja.png";
+import copoPequeno2 from "../../assets/vermelho.png";
+import copoPequeno3 from "../../assets/amarelo.png";
+import elipse1 from "../../assets/elipseAmarela.png";
+import elipse2 from "../../assets/elipseVerde.png";
+import elipse3 from "../../assets/elipseVermelha.png";
+
 
 export default function Home () {
+    const [copoSelecionado, setCopoSelecionado] = useState(copo1);
+
+    const [elipseSelecionada, setElipseSelecionada] = useState(elipse2);
+
+    const selecionarCopo1 = () =>{
+        setCopoSelecionado(copo1);
+        setElipseSelecionada(elipse1);
+
+    };
+    const selecionarCopo2 = () =>{
+        setCopoSelecionado(copo2);
+        setElipseSelecionada(elipse3);
+
+    };
+    const selecionarCopo3 = () =>{
+        setCopoSelecionado(copo3);
+        setElipseSelecionada(elipse2);
+
+    }
     return (
-        <HeaderStyle>
+      <>
+    
+        
+        <MainStyle>
             
-            <section>
-                <h1>Mais que Café </h1>
-                <p>Isso  é <a>Starbucks</a></p>
+            <Section>
+                <h2>Mais que Café</h2>
+                <h1>Isso é <span>Starbucks</span></h1>
 
-                <h2>A Starbucks oferece uma variedade de cafés de alta qualidade. Alguns dos cafés mais populares incluem o Caffè Americano, o Cappuccino, o Latte Macchiato e o Espresso. Além disso, a Starbucks oferece bebidas quentes e frias, doces diferenciados e sanduíches.</h2>
-            <Button onClick={() => setMensagem('Obrigado por querer saber mais!')}>SAIBA MAIS</Button>
-            <img src="src/assets/laranja.png" alt="Copo laranja"/>
-            <img src="src/assets/vermelho.png" alt="Copo vermelho"/>
-            <img src="src/assets/amarelo.png" alt="Copo amarelo"/>
-            <img src="src/assets/elipseVerde.png" alt= "elipse Verde"/>
-            <div>
-                <img src="src/assets/amarelo2x.png" alt= "Copão Amarelo"/>
-            </div>
-            </section>
+                <p>A Starbucks oferece uma variedade de cafés de alta qualidade. Alguns dos cafés mais populares incluem o Caffè Americano, o Cappuccino, o Latte Macchiato e o Espresso. Além disso, a Starbucks oferece bebidas quentes e frias, doces diferenciados e sanduíches.</p>
+                <Button target="_blank" href="https://www.starbucksathome.com/br/blog.html" onClick={() => setMensagem('Obrigado por querer saber mais!')}>SAIBA MAIS</Button>
+            
 
-        </HeaderStyle>
+               
 
+            
+
+            <ContainerCopos>
+                <button onClick={selecionarCopo1}>
+                    <img src={copoPequeno1} alt="Copo 1" />
+                    
+                </button>
+
+                 <button onClick={selecionarCopo2}>
+                     <img src={copoPequeno2} alt="Copo 2" />
+                     
+                </button>
+
+                <button onClick={selecionarCopo3}>
+                    <img src={copoPequeno3} alt="Copo 3" />
+                    
+                    
+                </button>
+            </ContainerCopos>
+            </Section>
+
+            <ContainerCopo >
+                  <img src={elipseSelecionada} alt ="elipse "/> 
+                  <div>   
+                    <img src={copoSelecionado} alt="Copo Selecionado" />
+                  </div>
+                  
+            </ContainerCopo>
+            
+
+        </MainStyle>
+     </>   
     )
 }
