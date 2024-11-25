@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MainStyle, Section, Button, ContainerCopos, ContainerCopo,} from "./style";
+import { MainStyle, Section, Button, Copinhos, Copao,} from "./style";
 
 import copo1 from "../../assets/laranja2x.png";
 import copo2 from "../../assets/vermelho2x.png";
@@ -43,39 +43,35 @@ export default function Home () {
                 <h1>Isso é <span>Starbucks</span></h1>
 
                 <p>A Starbucks oferece uma variedade de cafés de alta qualidade. Alguns dos cafés mais populares incluem o Caffè Americano, o Cappuccino, o Latte Macchiato e o Espresso. Além disso, a Starbucks oferece bebidas quentes e frias, doces diferenciados e sanduíches.</p>
-                <Button target="_blank" href="https://www.starbucksathome.com/br/blog.html" onClick={() => setMensagem('Obrigado por querer saber mais!')}>SAIBA MAIS</Button>
-            
+                <Button href="https://www.starbucksathome.com/br/blog.html" onClick={() => setMensagem('Obrigado por querer saber mais!')}>SAIBA MAIS</Button>
 
-               
+              <Copinhos>
 
-            
-
-            <ContainerCopos>
                 <button onClick={selecionarCopo1}>
-                    <img src={copoPequeno1} alt="Copo 1" />
+                    <img src={copoPequeno1} alt="Copo Pequeno Laranja" />
                     
                 </button>
 
                  <button onClick={selecionarCopo2}>
-                     <img src={copoPequeno2} alt="Copo 2" />
+                     <img src={copoPequeno2} alt="Copo Pequeno Vermelho" />
                      
                 </button>
 
                 <button onClick={selecionarCopo3}>
-                    <img src={copoPequeno3} alt="Copo 3" />
+                    <img src={copoPequeno3} alt="Copo Pequeno Amarelo" />
                     
                     
                 </button>
-            </ContainerCopos>
+              </Copinhos>
             </Section>
 
-            <ContainerCopo >
+            <Copao >
                   <img src={elipseSelecionada} alt ="elipse "/> 
                   <div>   
                     <img src={copoSelecionado} alt="Copo Selecionado" />
                   </div>
                   
-            </ContainerCopo>
+            </Copao>
             
 
         </MainStyle>

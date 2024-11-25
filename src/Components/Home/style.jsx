@@ -53,7 +53,7 @@ export const MainStyle = styled.main`
       
     `;
 
-export const ContainerCopos = styled.div`
+export const Copinhos = styled.div`
     display: flex;
     margin: 8% auto;
     gap: 2rem;
@@ -80,7 +80,7 @@ export const ContainerCopos = styled.div`
   
    
 
-   export const ContainerCopo = styled.div`
+   export const Copao = styled.div`
     position: relative;
     display: flex;
     justify-content: center;
