@@ -50,13 +50,14 @@ img{
 }
 `;
 
-export const Button= styled.button`
+export const Button= styled.a`
  background-color: #037143;
  color: white;
  border: none;
  padding: 10px 30px;
  font-weight: bold;
  border-radius: 30px;
+ text-decoration:none;
 
  cursor: pointer;
 transition: background-color 0.3s ease;

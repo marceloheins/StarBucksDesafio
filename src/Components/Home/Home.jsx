@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MainStyle, Section, Button, Copinhos, Copao,} from "./style";
+import { MainStyle, Section, TextoPrincipal, Button, Copinhos, Copao,} from "./style";
 
 import copo1 from "../../assets/laranja2x.png";
 import copo2 from "../../assets/vermelho2x.png";
@@ -42,8 +42,9 @@ export default function Home () {
                 <h2>Mais que Café</h2>
                 <h1>Isso é <span>Starbucks</span></h1>
 
-                <p>A Starbucks oferece uma variedade de cafés de alta qualidade. Alguns dos cafés mais populares incluem o Caffè Americano, o Cappuccino, o Latte Macchiato e o Espresso. Além disso, a Starbucks oferece bebidas quentes e frias, doces diferenciados e sanduíches.</p>
-                <Button href="https://www.starbucksathome.com/br/blog.html" onClick={() => setMensagem('Obrigado por querer saber mais!')}>SAIBA MAIS</Button>
+                <TextoPrincipal>A Starbucks oferece uma variedade de cafés de alta qualidade. Alguns dos cafés mais populares incluem o Caffè Americano, o Cappuccino, o Latte Macchiato e o Espresso. Além disso, a Starbucks oferece bebidas quentes e frias, doces diferenciados e sanduíches.</TextoPrincipal>
+                <Button href="https://www.starbucksathome.com/br/blog.html" target="_blank">SAIBA MAIS</Button>
+             
 
               <Copinhos>
 
@@ -66,10 +67,11 @@ export default function Home () {
             </Section>
 
             <Copao >
-                  <img src={elipseSelecionada} alt ="elipse "/> 
-                  <div>   
+                
+                    <img src={elipseSelecionada} alt ="elipse "/> 
+                   
                     <img src={copoSelecionado} alt="Copo Selecionado" />
-                  </div>
+                  
                   
             </Copao>
             

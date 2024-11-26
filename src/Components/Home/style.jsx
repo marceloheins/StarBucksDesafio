@@ -1,17 +1,32 @@
 import styled, {keyframes} from "styled-components";
 
 
-export const Section = styled.section`
-  position: relative;  
-`
+
 
 export const MainStyle = styled.main`
+
+  *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  }
+  :root{
+      @media (min-width:768px){
+        font-size: 18px;
+      }
+
+      @media(min-widht: 1024px){
+        font-size: 18px;
+      }
+    
+    }
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     heinght: 80vh;
     margin: 0 4vw;
-    width: 80%;
+    width: 100%;
 
 
 
@@ -37,27 +52,33 @@ export const MainStyle = styled.main`
         font-family: "Inter", serif;
         line-height: 77.45px;
         color: #00000;  
-    }
-    p{
-        widht: 737px;
-        height: 148px;
-        top: 451px;
-        left: 116px;
-        font-size: 24px;
-        weight: 400;
-        font-family: "Poppins", serif;
-        line-height: 36px;
-        
-        color: #00000;  
-    }
+    }`
+
+
+    export const Section = styled.section`
+    position: relative;  
+    `
+
+    export const TextoPrincipal = styled.p`
+      widht: 737px;
+      height: 148px;
+      top: 451px;
+      left: 116px;
+      font-size: 24px;
+      weight: 400;
+      font-family: "Poppins", serif;
+      line-height: 36px;
       
-    `;
+      color: #00000;  `
+
+      
+  
 
 export const Copinhos = styled.div`
     display: flex;
     margin: 8% auto;
     gap: 2rem;
-    width: 30%;
+    width: 100%;
   
   
     button {
@@ -85,38 +106,31 @@ export const Copinhos = styled.div`
     display: flex;
     justify-content: center;
   
-    top: 40%;
+    top: 100%;
     right: -15%;
-    width: 50%;
+    width: 10%;
     height: 100%;
 
 
 
     img{
-      position: relative;
-      width: 483px;
-      right: 502px;
-      top: 431px;
-    }
-
-    div {
       position: absolute;
       width: 483px;
-      right: 50px;
+      right: 480px;
       top: 43px;
-
-      
-      }
-    `;
+    }
+      `;
    
 
-export const Button= styled.button`
+export const Button= styled.a`
  background-color: #037143;
+ text-decoration:none;
  color: white;
  border: none;
- padding: 10px 30px;
+ padding: 20px 40px;
  font-weight: bold;
  border-radius: 30px;
+ font-family: "Poppins", serif;
 
  cursor: pointer;
 transition: background-color 0.3s ease;
